@@ -1,0 +1,32 @@
+#Product:hover {
+  background-color: #ddd;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button {
+  margin: 2px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: 2px solid rgb(189, 188, 188);
+  border-radius: 4px;
+  box-shadow: 2px 2px rgba(128, 128, 128, 0.3);
+}
+
+button:hover {
+  transform: translateY(2px);
+}
+
+button.View {
+  background: #beecd0;
+}
+
+button.Edit {
+  background: #81b8ce;
+}
+
+button.Delete {
+  background: #f79696;
+}
