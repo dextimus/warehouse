@@ -30,3 +30,24 @@ button.Edit {
 button.Delete {
   background: #f79696;
 }
+
+.Product-column_1 {
+  width: 200px;
+  text-align: left;
+}
+
+.Product-column_2 {
+  width: 120px;
+}
+
+.Product-column_3 {
+  width: 80px;
+}
+
+.Product-column_4 {
+  width: 60px;
+}
+
+.Product-column_5 {
+  width: 250px;
+}

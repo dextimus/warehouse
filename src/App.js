@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>STOCK MANAGEMENT</h1>
+
         <Switch location={this.props.location}>
           <Route path="/" exact component={ProductList} />
           <Route path="/products/{id}" component={ProductDetails} />

@@ -10,19 +10,19 @@ class Product extends Component {
       <table>
         <tbody>
           <tr id="Product" className={this.props.style}>
-            <td style={{ width: "200px", textAlign: "left" }}>{name}</td>
-            <td style={{ width: "120px" }}>{ean}</td>
-            <td style={{ width: "80px" }}>{type}</td>
-            <td style={{ width: "80px" }}>{weight}</td>
-            <td style={{ width: "80px" }}>{color}</td>
-            <td style={{ width: "80px" }}>{quantity}</td>
-            <td style={{ width: "80px" }}>{price}</td>
+            <td className="Product-column_1">{name}</td>
+            <td className="Product-column_2">{ean}</td>
+            <td className="Product-column_3">{type}</td>
+            <td className="Product-column_3">{weight}</td>
+            <td className="Product-column_3">{color}</td>
+            <td className="Product-column_3">{quantity}</td>
+            <td className="Product-column_3">{price}</td>
 
             <ProductConsumer>
               {(value) => {
                 return (
                   <>
-                    <td style={{ width: "60px" }}>
+                    <td className="Product-column_4">
                       <input
                         type="checkbox"
                         onChange={() => value.checkHandler(id)}
@@ -30,7 +30,7 @@ class Product extends Component {
                       />
                     </td>
 
-                    <td style={{ width: "250px" }}>
+                    <td className="Product-column_5">
                       <Link to="/products/{id}">
                         {value.checked ? (
                           <button

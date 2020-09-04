@@ -13,8 +13,23 @@ class ProductProvider extends Component {
     checked: true,
   };
 
+  UNSAFE_componentWillMount() {
+    localStorage.getItem("products") &&
+      this.setState({
+        products: JSON.parse(localStorage.getItem("products")),
+      });
+  }
+
   componentDidMount() {
-    this.setProducts();
+    if (!localStorage.getItem("products")) {
+      this.setProducts();
+    } else {
+      console.log("Using data from local storage");
+    }
+  }
+
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("products", JSON.stringify(nextState.products));
   }
 
   //copy products
@@ -129,7 +144,6 @@ class ProductProvider extends Component {
     });
     this.setState({ products: updatedProducts });
   };
-
 
   render() {
     return (
